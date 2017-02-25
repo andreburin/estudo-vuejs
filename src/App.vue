@@ -1,16 +1,20 @@
 <template>
-  <div class="phone-viewport">
+  <!--<div class="phone-viewport">
     <md-toolbar>
       <h1 class="md-title">HardCode</h1>
     </md-toolbar>
-  </div>
+  </div>-->
+  <ccLogin></ccLogin>
 </template>
 
 <script>
-
-export default {
-  name: 'mainComponents'
-}
+  import ccLogin from './components/Login'
+  export default {
+    name: 'mainComponents',
+    components: {
+      ccLogin
+    }
+  }
 </script>
 
 <style>
