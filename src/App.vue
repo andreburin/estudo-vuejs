@@ -1,15 +1,24 @@
 <template>
   <div class="phone-viewport">
-    <md-toolbar>
-      <h1 class="md-title">HardCode</h1>
-    </md-toolbar>
+    <ccMenu></ccMenu>
+    <ccLogin></ccLogin>
   </div>
 </template>
 
 <script>
-
+import ccMenu from './components/Menu'
+import ccLogin from './components/Login'
 export default {
-  name: 'mainComponents'
+  name: 'mainComponents',
+  components: {
+    ccMenu,
+    ccLogin
+  },
+  data () {
+    return {
+      nome: 'André Gustavo dos Santos Burin'
+    }
+  }
 }
 </script>
 
