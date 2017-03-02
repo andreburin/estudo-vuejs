@@ -1,18 +1,17 @@
 <template>
-  <div class="phone-viewport">
-    <ccMenu></ccMenu>
-    <ccLogin></ccLogin>
-  </div>
+    <ccHello></ccHello>
 </template>
 
 <script>
+import ccHello from './components/Hello'
 import ccMenu from './components/Menu'
 import ccLogin from './components/Login'
 export default {
   name: 'mainComponents',
   components: {
     ccMenu,
-    ccLogin
+    ccLogin,
+    ccHello
   },
   data () {
     return {
