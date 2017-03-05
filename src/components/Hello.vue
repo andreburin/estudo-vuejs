@@ -1,71 +1,26 @@
 <template>
-  <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+  <block content>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+          <h1 class="text-center login-title">i18next.t('txt.text')</h1>
+          <div class="account-wall">
+            <i class="fa fa-user-circle profile-img text-primary" aria-hidden="true"></i>
+            <form class="form-horizontal form-signin" action="index.html" method="post">
+              <input type="text" name="username" class="form-control" placeholder="E-Mail" value="" required autofocus>
+              <input type="password" name="password" class="form-control" placeholder="Senha" value="" required >
+              <button role="button" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+              <span class="clearfix"/></span>
+            </form>
+          </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
       </div>
     </div>
-
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>© 2016 Company, Inc.</p>
-      </footer>
-    </div> <!-- /container -->
-
-</body>
+  </block>
 </template>
 
 <script>
+
 import ccIntro from './Intro'
 export default {
   components: {
@@ -75,7 +30,38 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  
+    .form-signin{
+      max-width: 330px;
+      padding: 15px;
+      margin: 0 auto;
+    }
+
+    .profile-img{
+      font-size: 10em;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .account-wall{
+      margin-top: 20px;
+      padding: 40px 0px 20px 0px;
+      background-color: #f7f7f7;
+      -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .login-title{
+      color: #555;
+      font-size: 18px;
+      font-weight: 400;
+      display: block;
+    }
+
+    button{
+      margin-top: 10px;
+    }
+
 </style>
